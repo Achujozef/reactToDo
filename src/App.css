@@ -1,38 +1,153 @@
-.App {
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #1c2c11;
+  font-family: Arial, sans-serif;
+}
+
+.app {
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%, -10%);
+}
+
+.mainHeading {
   text-align: center;
+  margin-bottom: 20px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.mainHeading h1 {
+  color: #fff;
+  font-size: 36px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.subHeading {
+  text-align: center;
+  margin-bottom: 10px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.subHeading h2 {
+  color: #fff;
+  font-size: 24px;
+}
+
+.input {
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  margin-top: 10px;
+  width: 20em;
 }
 
-.App-link {
-  color: #61dafb;
+.input input {
+  width: 100%;
+  height: 2em;
+  border: none;
+  border-radius: 4px;
+  padding: 4px;
+  font-size: 16px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.input i {
+  cursor: pointer;
+  font-size: 24px;
+  color: #046900;
+  margin-left: 5px;
+}
+
+.todos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.todo {
+  margin-top: 10px;
+  width: 20em;
+  background-color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 6px;
+  padding: 10px;
+}
+
+.todo .left {
+  display: flex;
+  align-items: center;
+}
+
+.todo .left input {
+  margin-right: 10px;
+}
+
+.todo .left p {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 600;
+  color: #000;
+}
+
+.right i {
+  cursor: pointer;
+  font-size: 24px;
+  color: #ff0000;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+.deletedTodos {
+  margin-top: 20px;
+}
+
+.deletedTodos h2 {
+  color: #fff;
+  font-size: 24px;
+}
+
+.deletedTodo , .completedTodo {
+  background-color: #c42020;
+  padding: 10px;
+  margin-bottom: 5px;
+  border-radius: 6px;
+}
+
+.deletedTodo h3 {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 600;
+}
+.completedTodo{
+  background-color: #3ad413;
+  padding: 10px;
+  margin-top: 5px;
+  border-radius: 6px;
+}
+.completeButton {
+  padding: 5px 10px;
+  border: none;
+  border-radius: 4px;
+  background-color: #046900;
+  color: #fff;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.completeButton.completed {
+  background-color: #999;
+  cursor: not-allowed;
 }
